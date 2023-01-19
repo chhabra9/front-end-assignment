@@ -1,0 +1,16 @@
+<div class="block">
+<select [(ngModel)]="from">
+    <option *ngFor="let o of currenciesToRupee" [value]="o.val">
+       {{o.name}}
+    </option>
+ </select>
+ <input type="text"  [(ngModel)]="fromVal" (ngModelChange)="convert1()" >
+</div>
+<div class="block">
+ <select [(ngModel)]="to">
+    <option *ngFor="let o of rupeesToCurrencies" [value]="o.val">
+       {{o.name}}
+    </option>
+ </select>
+ <input type="text"  [(ngModel)]="toVal" (ngModelChange)="convert2()" >
+</div>

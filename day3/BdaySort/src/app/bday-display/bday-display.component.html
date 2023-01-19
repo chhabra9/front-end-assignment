@@ -1,0 +1,18 @@
+<h2>BirthDay Sort</h2>
+<table>
+    <label >sort By</label>
+    <input type="radio" [name]="name" value="name" (change)="fun($event)">
+    <label for="name">Name</label>
+    <input type="radio" [name]="birthDate" value="birthDate" (change)="fun($event)">
+    <label for="birthDate">birth Date</label>
+
+    <tr>
+      <th>Name</th>
+      <th>Birth Date</th>
+    </tr>
+    <tr *ngFor="let user of users" >
+      <td>{{user.name}}</td>
+      <td>{{user.birthDate}}</td>
+      
+    </tr>
+</table>
